@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ElectroHub</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+
+    <h2>🛍️ ElectroHub</h2>
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search products..."
+        onkeyup="searchProducts()"
+    >
+    <div class="profile-box">
+    <h3 id="username"></h3>
+    <p id="userEmail"></p>
+    <p id="orderCount"></p>
+    <p id="wishlistCount"></p>
+    <p id="cartItemsCount"></p>
+</div>
+
+    <div class="nav-links">
+
+    <span id="username"></span>
+
+
+    <a href="wishlist.html">
+        ❤️ Wishlist
+    </a>
+
+    <a href="cart.html">
+        🛒 Cart
+    </a>
+    <button onclick="toggleDarkMode()">
+        🌙 Dark Mode
+     </button>
+    <button onclick="logout()">
+       Logout
+      </button>
+
+
+</script>
+
+</nav>
+
+<h1>Latest Electronics & Gadgets</h1>
+<p style="text-align:center;">
+    Your One-Stop Destination for Electronics & Gadgets
+</p>
+
+<div id="products" class="product-container"></div>
+
+<script src="js/products.js"></script>
+
+<script>
+function logout(){
+
+    localStorage.removeItem("loggedInUser");
+
+    alert("Logged Out Successfully!");
+
+    window.location.reload();
+}
+</script>
+
+</body>
+</html>
