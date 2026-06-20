@@ -5,6 +5,8 @@ const User = require("../models/User");
 
 // REGISTER
 router.post("/register", async (req, res) => {
+    console.log("REGISTER HIT");
+console.log(req.body);
     try {
         const user = await User.create(req.body);
 

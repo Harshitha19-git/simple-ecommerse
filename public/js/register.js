@@ -1,14 +1,16 @@
 const registerForm = document.getElementById("registerForm");
 
+console.log("REGISTER JS LOADED");
+
 registerForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const username = document.getElementById("name").value;
+    const username = document.getElementById("username").value;
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
     try {
-        const response = await fetch("/api/users/register", {
+        const response = await fetch("http://localhost:5000/api/users/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -22,15 +24,21 @@ registerForm.addEventListener("submit", async (e) => {
 
         const data = await response.json();
 
-        alert("Registration Successful!");
-      window.location.href = "login.html";
+        console.log("REGISTER RESPONSE:", data);
 
-        document.getElementById("registerForm").reset();
+        if (response.ok) {
+            alert("Registered Successfully!");
+            window.location.href = "login.html";
+        } else {
+            alert(data.message || "Registration Failed");
+        }
 
-        console.log(data);
+        registerForm.reset();
 
     } catch (error) {
         console.error(error);
         alert("Registration Failed");
     }
+
+    console.log("register clicked");
 });

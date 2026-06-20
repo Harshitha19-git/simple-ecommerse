@@ -1,11 +1,12 @@
 document.getElementById("loginForm").addEventListener("submit", async function(e) {
+    
     e.preventDefault();
 
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
-
+console.log("LOGIN JS LOADED");
     try {
-        const response = await fetch("/api/users/login", {
+        const response = await fetch("http://localhost:5000/api/users/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -16,7 +17,8 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
             })
         });
 
-        const data = await response.json();
+       const data = await response.json();
+       console.log(data);
 
         if (data.success) {
 
@@ -33,4 +35,5 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
         console.error(error);
         alert("Login Failed");
     }
+    console.log("LOGIN BUTTON CLICKED");
 });
