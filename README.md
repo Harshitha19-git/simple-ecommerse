@@ -79,6 +79,7 @@ Frontend → Express API → MongoDB → Response → UI Update
 
 ## 📂 Project Structure
 
+```
 simple-ecommerse/
 │
 ├── public/
@@ -99,11 +100,11 @@ simple-ecommerse/
 │   └── orderRoutes.js
 │
 ├── server.js
-├── .env  (not uploaded)
+├── .env
 ├── .gitignore
 └── package.json
+```
 
----
 ## ⚡ Setup Guide (Run Locally)
 
 ### 🧾 Requirements
