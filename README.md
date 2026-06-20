@@ -1,4 +1,4 @@
-# 🛒 Simple E-Commerce Project 💻✨
+# 🛒 Simple E-Commerce Project 💻
 
 A **Full Stack E-Commerce Web Application** built as part of the **CodeAlpha Internship 🚀** using Node.js, Express.js, MongoDB, HTML, CSS, and JavaScript.
 
@@ -13,6 +13,8 @@ This project demonstrates authentication, REST API development, and full fronten
 | 🎨 Frontend | http://127.0.0.1:5500 |
 | ⚙️ Backend API | http://localhost:5000 |
 | 🗄️ Database | MongoDB Atlas |
+
+🌍 Note: This project runs locally using Live Server and Node.js backend.
 
 ---
 
